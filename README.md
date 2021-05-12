@@ -3,9 +3,9 @@
 
 - We’ll be using Vite to handle bundling our app and providing a dev server. You can quickly scaffold a new app using their CLI:
 
-npm init @vitejs/app
-Follow the instructions in your Terminal (pick the react option)
-cd [my-app-name]
-npm install to install the dependencies
-npm run dev start the dev server
-Open the project in your editor—you should see an example app setup. Feel free to delete the logo/CSS files that you won’t be using.
+1- npm init @vitejs/app
+2- Follow the instructions in your Terminal (pick the react option)
+3- cd [my-app-name]
+4- npm install to install the dependencies
+5- npm run dev start the dev server
+6- Open the project in your editor—you should see an example app setup. Feel free to delete the logo/CSS files that you won’t be using.
