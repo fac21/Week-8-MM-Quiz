@@ -2,7 +2,7 @@
 - we have searched to get some idea and we have checked some APIs and we came across the quize idea . To fetch API with random question and for being intractive we decided to do let the user do the quize and if they get a certain score we will give bonus time to them . 
 
 - We’ll be using Vite to handle bundling our app and providing a dev server. You can quickly scaffold a new app using their CLI:
-
+# Setup
 1- npm init @vitejs/app
 2- Follow the instructions in your Terminal (pick the react option)
 3- cd [my-app-name]
