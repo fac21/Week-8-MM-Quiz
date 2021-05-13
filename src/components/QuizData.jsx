@@ -4,7 +4,7 @@ function QuizData() {
 	const [quizData, setQuiz] = React.useState('');
 
 	React.useEffect(() => {
-		fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple')
+		fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=boolean')
 			.then((res) => res.json())
 			.then((data) => {
 				setQuiz(data), console.log(data);
@@ -15,29 +15,11 @@ function QuizData() {
 	} else {
 		return (
 			<div>
-				<p>{quizData.results}</p>
+				<p>{quizData.results[0].question}</p>
+				<p>{quizData.results[0].correct_answer}</p>
+				<p>{quizData.results[0].incorrect_answers}</p>
 			</div>
 		);
 	}
 }
 export default QuizData;
-
-// const [profileData, setProfileData] = React.useState();
-// const gitUrl = 'https://api.github.com/users/';
-
-// React.useEffect(() => {
-//     fetch(gitUrl + props.username)
-//         .then((res) => res.json())
-//         .then((data) => {
-//             setProfileData(data), console.log(data);
-//         });
-// }, [props.username]);
-// if (!profileData) {
-//     return <div>Loading...</div>;
-// } else {
-//     return (
-//         <div>
-//             <p>{profileData.login}</p>
-//             <img src={profileData.avatar_url}></img>
-//         </div>
-//     );
