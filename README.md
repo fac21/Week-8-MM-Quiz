@@ -11,5 +11,3 @@
 6- Open the project in your editor—you should see an example app setup. Feel free to delete the logo/CSS files that you won’t be using.
 
 
-# We have learned 
-having uniqe key is needed when we use map to render some options , we had two buttons which we got error in console that should be uniqe , so we had to separate the buttons
