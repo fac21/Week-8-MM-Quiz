@@ -4,6 +4,7 @@ function QuizData(props) {
 	const [quizData, setQuiz] = React.useState('');
 	const [index, setIndex] = React.useState(0);
 	const [timeLeft, setTimeLeft] = React.useState(20);
+	audioObj = new Audio(correct.mp3);
 
 	React.useEffect(() => {
 		fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=boolean')
@@ -21,18 +22,13 @@ function QuizData(props) {
 	const currentQuestion = quizData.results[index];
 	const question = currentQuestion.question.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
 	const correct_answer = currentQuestion.correct_answer;
-	const incorrect_answers = currentQuestion.incorrect_answers;
-	const choices = [correct_answer, ...incorrect_answers];
 
-	// var shuffledChoices = choices.sort(() => Math.random() - 0.5);
 
 	function checkAnswer(event) {
 		if (event.target.textContent === correct_answer) {
-			setTimeLeft(timeLeft + 5);
+			audioObj;
 			props.setScore(props.score + 1);
-		} else {
-			setTimeLeft(timeLeft - 2);
-		}
+		} 
 	}
 
 	return (
@@ -45,34 +41,18 @@ function QuizData(props) {
 				onClick={(event) => {
 					checkAnswer(event);
 					setIndex(index + 1);
-				}}
-			>
-				{choices[0]}
+				}}>
+				True
 			</button>
 			<button
 				onClick={(event) => {
 					checkAnswer(event);
 					setIndex(index + 1);
-				}}
-			>
-				{choices[1]}
+				}}>
+				False
 			</button>
 
-			{/* {
 		
-		
-		shuffledChoices.map(choice => (
-
-			<button key={index} onClick ={(event) =>{
-				checkAnswer(event)
-				setIndex(index + 1)
-			}
-			
-			}>{choice[0]}</button>
-		))
-		
-		} */}
-			{/* <h2><span>SCORE:{props.score}</span></h2> */}
 		</main>
 	);
 }

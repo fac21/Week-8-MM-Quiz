@@ -1,7 +1,7 @@
 import React from 'react';
 export default function GameOver(props) {
 	return (
-		<div class='game__over'>
+		<div className='game_over'>
 			<h1>GAME OVER!</h1>
 			<p>Your score:</p>
 			<p>{props.score}</p>
