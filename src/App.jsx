@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import QuizData from './components/QuizData.jsx';
 import StartQuiz from './components/StartQuiz';
+import GameOver from './components/GameOver';
 // import from ""
 
 function App() {
@@ -11,11 +12,11 @@ function App() {
 	return (
 		<div className='App'>
 			<div>
-				{quizState === 'notStarted' ? (
-					<StartQuiz username={username} setUser={setUser} setQuizState={setQuizState} />
-				) : (
-					<p>Hi again'</p>
-				)}
+				{quizState === "notStarted" ? <StartQuiz username={username} setUser={setUser} setQuizState={setQuizState} /> :
+				quizState === "started" ? <QuizData username={username} setQuizState={setQuizState}  /> :
+				<GameOver/>
+
+				}
 			</div>
 		</div>
 	);

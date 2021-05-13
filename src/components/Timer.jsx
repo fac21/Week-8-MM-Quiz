@@ -3,13 +3,13 @@ import React from "react"
 export default function Timer({timeLeft, setTimeLeft, setQuizState}){
     React.useEffect(() => {
         //  if there is not timeLeft then game over?
-        if (  timeLeft <= 0)   setGameState("gameOver");
+        if (  timeLeft <= 0)   setQuizState("gameOver");
         // else create set interval function for every second
         const startInterval = setInterval(() => {
                   setTimeLeft(timeLeft - 1)
             }, 1000);
         return () => clearInterval(startInterval)
-    }, [timeLeft, setGameState, setTimeLeft])
+    }, [timeLeft, setQuizState, setTimeLeft])
 
     return (
    
