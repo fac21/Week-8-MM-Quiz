@@ -4,7 +4,7 @@ function QuizData(props) {
 	const [quizData, setQuiz] = React.useState('');
 	const [index, setIndex] = React.useState(0);
 	const [timeLeft, setTimeLeft] = React.useState(20);
-	audioObj = new Audio(correct.mp3);
+	const audioObj = new Audio('correct.mp3');
 
 	React.useEffect(() => {
 		fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=boolean')
