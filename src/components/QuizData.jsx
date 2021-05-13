@@ -38,7 +38,7 @@ function QuizData(props) {
 	return (
 		<main className='quiz'>
 			<Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} setQuizState={props.setQuizState} />
-			{index === 0 ? <h1>Hi {props.username}!</h1> : null}
+			{index === 0 ? <p>Hi {props.username}!</p> : null}
 			{index < 9 ? <h2>{question}</h2> : props.setQuizState('gameOver')}
 
 			<button

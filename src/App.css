@@ -1,22 +1,26 @@
 body {
-  background-color: #a5e1ad;
-
+	background-color: #a5e1ad;
 }
 
 h1 {
-  color: #21094e;
-  text-align: center;
-  font-size: 5rem;
-  font-family: 'Rubik Mono One', sans-serif;
+	color: #21094e;
+	text-align: center;
+	font-size: 5rem;
+	font-family: 'Rubik Mono One', sans-serif;
 }
 
 p {
+	text-align: center;
+	color: #21094e;
+	font-size: 2rem;
+	font-family: 'Rubik Mono One', sans-serif;
 }
 
-form { 
-  margin: 0 auto; 
-  padding: 10px;
-  width:250px;
-  }
+form {
+	margin: 0 auto;
+	padding: 10px;
+	width: 250px;
+}
 
-
+img {
+}
