@@ -1,38 +1,21 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import QuizData from './components/QuizData.jsx';
+import StartQuiz from './components/StartQuiz';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [username, setUser] = React.useState('');
+	const [quizState, setQuizState] = React.useState('notStarted');
 
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				{/* <img src={} className='App-logo' alt='logo' /> */}
-				<h1>Don Quizote</h1>
-				<QuizData />
-				<p>
-					<button onClick={() => setCount((count) => count + 1)}>count is: {count}</button>
-				</p>
-				<p>
-					Edit <code>App.jsx</code> and save to test HMR updates.
-				</p>
-				<p>
-					<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-						Learn React
-					</a>
-					{' | '}
-					<a
-						className='App-link'
-						href='https://vitejs.dev/guide/features.html'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Vite Docs
-					</a>
-				</p>
-			</header>
+			<div>
+				{quizState === 'notStarted' ? (
+					<StartQuiz username={username} setUser={setUser} setQuizState={setQuizState} />
+				) : (
+					<p>Hi again'</p>
+				)}
+			</div>
 		</div>
 	);
 }
