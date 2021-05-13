@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 export default function StartQuiz(props) {
 	return (
@@ -14,7 +15,7 @@ export default function StartQuiz(props) {
 					value={props.username}
 					onChange={(event) => props.setUser(event.target.value)}
 				/>
-				<input type='submit' value='Start Game' onClick={() => props.setGameState('started')} />
+				<input type='submit' value='Start Game' onClick={() => props.setQuizState('started')} />
 			</form>
 		</div>
 	);
