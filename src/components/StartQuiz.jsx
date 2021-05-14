@@ -1,10 +1,12 @@
 import React from 'react';
 import '../App.css';
+import mainImg from '../homepage-img.png';
 
 export default function StartQuiz(props) {
 	return (
 		<div className='start_game'>
-			<h1>Don Quizote!</h1>
+			<h1>Don Quizote</h1>
+			<img src={mainImg} alt='mainImg' />
 			<form>
 				<label htmlFor='username'>Enter Username</label>
 				<input
