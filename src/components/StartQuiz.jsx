@@ -5,8 +5,11 @@ import mainImg from '../homepage-img.png';
 export default function StartQuiz(props) {
 	return (
 		<div className='start_game'>
-			<h1>Don Quizote</h1>
-			<img src={mainImg} alt='mainImg' />
+			<h1>
+				Don <br />
+				Quizote
+			</h1>
+			{/* <img src={mainImg} alt='mainImg' /> */}
 			<form>
 				<label htmlFor='username'>Enter Username</label>
 				<input

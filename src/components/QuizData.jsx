@@ -23,12 +23,11 @@ function QuizData(props) {
 	const question = currentQuestion.question.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
 	const correct_answer = currentQuestion.correct_answer;
 
-
 	function checkAnswer(event) {
 		if (event.target.textContent === correct_answer) {
 			audioObj;
 			props.setScore(props.score + 1);
-		} 
+		}
 	}
 
 	return (
@@ -41,18 +40,18 @@ function QuizData(props) {
 				onClick={(event) => {
 					checkAnswer(event);
 					setIndex(index + 1);
-				}}>
+				}}
+			>
 				True
 			</button>
 			<button
 				onClick={(event) => {
 					checkAnswer(event);
 					setIndex(index + 1);
-				}}>
+				}}
+			>
 				False
 			</button>
-
-		
 		</main>
 	);
 }
