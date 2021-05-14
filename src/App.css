@@ -1,5 +1,10 @@
 body {
 	background-color: #a5e1ad;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	text-align: center;
+	color: #21094e;
+	margin: auto;
 }
 
 h1 {
@@ -7,6 +12,7 @@ h1 {
 	text-align: center;
 	font-size: 5rem;
 	font-family: 'Rubik Mono One', sans-serif;
+	margin-top: 20%;
 }
 
 p {
@@ -22,5 +28,8 @@ form {
 	width: 250px;
 }
 
-img {
-}
+/* .progress-bar {
+	display: flex;
+	justify-content: centre;
+	color: #21094e;
+} */
