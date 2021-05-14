@@ -4,13 +4,14 @@ function QuizData(props) {
 	const [quizData, setQuiz] = React.useState('');
 	const [index, setIndex] = React.useState(0);
 	const [timeLeft, setTimeLeft] = React.useState(20);
-	const audioObj = new Audio('correct.mp3');
+	const audioObj = new Audio('./correct.mp3');
 
 	React.useEffect(() => {
 		fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=boolean')
 			.then((res) => res.json())
-			.then((data) => setQuiz(data));
-		// setQuiz(data), console.log(data);
+			.then((data) => setQuiz(data))
+			.catch((error) => console.error(error))
+
 	}, []);
 
 	//if fetch is pending
